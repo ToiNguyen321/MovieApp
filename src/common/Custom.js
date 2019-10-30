@@ -8,6 +8,7 @@ export const sizeText = {
     textNormal: 12,
     textButton: 14,
     textBig: 16,
+    textBigMax: 18,
 }
 export const colors = {
     button1: '#E15050',

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, ImageBackground } from 'react-native';
-import OpenApp from './screens/OpenApp';
+import { View, Text, ImageBackground, StyleSheet } from 'react-native';
+import AppContainer from './navigators';
+
 
 export default class App extends Component {
   constructor(props) {
@@ -11,8 +12,16 @@ export default class App extends Component {
 
   render() {
     return (
-      <ImageBackground style={{ flex: 1 }} source={require('./assets/images/Background.png')}>
-        <OpenApp />
+      <ImageBackground
+        style={{
+          width: null,
+          height: null,
+          backgroundColor: 'transparent',
+          flex: 1,
+        }}
+        source={require('./assets/images/Background.png')}
+      >
+        <AppContainer style={{ backgroundColor: 'transparent' }} ref='navigator'/>
       </ImageBackground>
     );
   }
